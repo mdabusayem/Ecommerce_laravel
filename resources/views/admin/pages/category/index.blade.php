@@ -14,7 +14,7 @@
             <tr>
               <th>#</th>
               <th>Name</th>
-              <th>Description</th>
+              <th>Parent Category</th>
               <th>Image</th>
               <th>Action</th>
             </tr>
@@ -22,7 +22,13 @@
             <tr>
               <td>#</td>
               <td>{{ $category->name }}</td>
-              <td>{{ $category->description }}</td>
+              <td>
+                @if ($category->parent_id==NULL)
+                Primary Category
+                @else
+                {{ $category->parent->name }}
+                @endif
+              </td>
               <td>
                 <img src="/images/category/{{ $category->image }}" width="50" height="50"></td>
               <td>

@@ -12,7 +12,11 @@
 */
 Route::get('/','PagesController@index')->
 name('index');
+Route::get('/search','PagesController@search')->
+name('search');
 Route::get('/products','PagesController@products')->name('products');
+
+Route::get('/products/{slug}','ProductController@show')->name('products.show');
 
 // Admin
 Route::get('/admin','AdminPagesController@index')->name('admin.index');

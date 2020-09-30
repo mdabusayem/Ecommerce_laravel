@@ -16,8 +16,12 @@
 							   @foreach ($product->images as $images)
 							   @if ($i>0)
 
+
 							  <img class="card-img-top feature-img" src="{{ asset('images/products/'.$images->image ) }}" alt="Card image">
 							  @endif
+							  @php
+								$i--;
+							 @endphp
 							  @endforeach
 							  <div class="card-body">
 							    <h4 class="card-title">	{{ $product->title }}</h4>
@@ -27,9 +31,7 @@
 							  
 						</div>
 					</div>
-					@php
-						$i=$i-1;;
-					@endphp
+					
 					@endforeach
 					
 				</div>

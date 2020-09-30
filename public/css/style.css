@@ -1,3 +1,9 @@
+/*product css*/
+.product-item{
+	background: #dcf4fc;
+}
+
+
 /*over wright*/
 .bg-light {
     background-color: #007bff!important;

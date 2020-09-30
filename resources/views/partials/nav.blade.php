@@ -26,9 +26,9 @@
       </li> --}}
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0" action="{{ route('search') }}" method="get">
       <div class="input-group mb-3">
-	  <input type="text" class="form-control" placeholder="Product Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+	  <input type="text" name="search" class="form-control" placeholder="Product Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
 	  <div class="input-group-append">
 	    <button class="btn btn-outline-secondary" type="button"><i class="fa fa-search"></i></button>
 	  </div>

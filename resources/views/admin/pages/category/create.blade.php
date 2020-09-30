@@ -22,6 +22,17 @@
 
             </div>
             <div class="form-group">
+              <label for="exampleInputPassword1">Parent Category</label>
+              <select class="form-control" name="parent_id">
+                <option value="0">Select Parent</option>
+                @foreach($main_categories as $category)
+
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+              </select>
+
+            </div>
+            <div class="form-group">
               <label for="exampleInputEmail1">Category Image</label>
               <div class="row">
                 <div class="col-md-4">
