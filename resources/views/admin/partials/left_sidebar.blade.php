@@ -32,7 +32,26 @@
               </ul>
             </div>
           </li>
-          
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#division-pages" aria-expanded="false" aria-controls="division-pages"> <img class="menu-icon" src="/images/menu_icons/08.png" alt="menu icon"> <span class="menu-title">Manege Division</span><i class="menu-arrow"></i></a>
+            <div class="collapse" id="division-pages">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{ route('admin.division.create')}}">Create Divisions</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('admin.divisions') }}">Manage Division</a></li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#district-pages" aria-expanded="false" aria-controls="district-pages"> <img class="menu-icon" src="/images/menu_icons/08.png" alt="menu icon"> <span class="menu-title">Manege District</span><i class="menu-arrow"></i></a>
+            <div class="collapse" id="district-pages">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{ route('admin.district.create')}}">Create Districts</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ route('admin.districts') }}">Manage District</a></li>
+                
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
       <!-- partial -->

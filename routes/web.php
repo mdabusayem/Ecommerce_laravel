@@ -44,7 +44,30 @@ Route::post('/brand/edit/{id}','BrandController@update')->name('admin.brand.upda
 Route::get('/brand/delete/{id}','BrandController@delete')->name('admin.brand.delete');
 
 
+// division
+Route::get('/division','DivisionController@index')->name('admin.divisions');
+Route::get('/division/create','DivisionController@create')->name('admin.division.create');
+Route::get('/division/edit/{id}','DivisionController@edit')->name('admin.division.edit');
+Route::post('/division/store','DivisionController@store')->name('admin.division.store');
+Route::post('/division/edit/{id}','DivisionController@update')->name('admin.division.update');
+Route::get('/division/delete/{id}','DivisionController@delete')->name('admin.division.delete');
+
+
+// district
+Route::get('/district','DistrictController@index')->name('admin.districts');
+Route::get('/district/create','DistrictController@create')->name('admin.district.create');
+Route::get('/district/edit/{id}','DistrictController@edit')->name('admin.district.edit');
+Route::post('/district/store','DistrictController@store')->name('admin.district.store');
+Route::post('/district/edit/{id}','DistrictController@update')->name('admin.district.update');
+Route::get('/district/delete/{id}','DistrictController@delete')->name('admin.district.delete');
+
+//user
+Route::get('/token/{token}','VerificationController@verify')->name('user.verification');
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
